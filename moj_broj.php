@@ -10,7 +10,7 @@ function update_content()
 	if (temp == 1) {
 		var bule1 = 1;
 		while (bule1==1) {
-			var vrednost = Math.floor((Math.random() * 10) + 1);
+			var vrednost = Math.floor(Math.random() * 10);
 			if (vrednost > 0) {
 				bule1 = 0;
 				document.getElementById('celija1').innerHTML = vrednost;
@@ -22,7 +22,7 @@ function update_content()
 	if (temp == 2) {
 		var bule2 = 1;
 		while (bule2==1) {
-			var vrednost = Math.floor((Math.random() * 10) + 1);
+			var vrednost = Math.floor(Math.random() * 10);
 			if (vrednost > 0) {
 				bule2 = 0;
 				document.getElementById('celija2').innerHTML = vrednost;
@@ -34,7 +34,7 @@ function update_content()
 	if (temp == 3) {
 		var bule3 = 1;
 		while (bule3==1) {
-			var vrednost = Math.floor((Math.random() * 10) + 1);
+			var vrednost = Math.floor(Math.random() * 10);
 			if (vrednost > 0) {
 				bule3 = 0;
 				document.getElementById('celija3').innerHTML = vrednost;
@@ -46,7 +46,7 @@ function update_content()
 	if (temp == 4) {
 		var bule4 = 1;
 		while (bule4==1) {
-			var vrednost = Math.floor((Math.random() * 10) + 1);
+			var vrednost = Math.floor(Math.random() * 10);
 			if (vrednost > 0) {
 				bule4 = 0;
 				document.getElementById('celija4').innerHTML = vrednost;
