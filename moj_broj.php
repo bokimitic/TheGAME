@@ -10,10 +10,10 @@ function update_content()
 	if (temp == 1) {
 		var bule1 = 1;
 		while (bule1==1) {
-			var vrednost = Math.floor(Math.random() * 10);
-			if (vrednost > 0) {
+			var vrednost1 = Math.floor(Math.random() * 10);
+			if (vrednost1 > 0) {
 				bule1 = 0;
-				document.getElementById('celija1').innerHTML = vrednost;
+				document.getElementById('celija1').innerHTML = vrednost1;
 				document.getElementById('biraj1').innerHTML = "Prvi broj je izabran";
 				document.getElementById('divovi').innerHTML += "<div id='biraj2' align='center'><a href='#' onclick='update_content();'>Birajte drugi broj</a></div></br>";
 			}
@@ -22,10 +22,10 @@ function update_content()
 	if (temp == 2) {
 		var bule2 = 1;
 		while (bule2==1) {
-			var vrednost = Math.floor(Math.random() * 10);
-			if (vrednost > 0) {
+			var vrednost2 = Math.floor(Math.random() * 10);
+			if (vrednost2 > 0) {
 				bule2 = 0;
-				document.getElementById('celija2').innerHTML = vrednost;
+				document.getElementById('celija2').innerHTML = vrednost2;
 				document.getElementById('biraj2').innerHTML = "Drugi broj je izabran";
 				document.getElementById('divovi').innerHTML += "<div id='biraj3' align='center'><a href='#' onclick='update_content();'>Birajte treci broj</a></div></br>";
 			}
@@ -34,10 +34,10 @@ function update_content()
 	if (temp == 3) {
 		var bule3 = 1;
 		while (bule3==1) {
-			var vrednost = Math.floor(Math.random() * 10);
-			if (vrednost > 0) {
+			var vrednost3 = Math.floor(Math.random() * 10);
+			if (vrednost3 > 0) {
 				bule3 = 0;
-				document.getElementById('celija3').innerHTML = vrednost;
+				document.getElementById('celija3').innerHTML = vrednost3;
 				document.getElementById('biraj3').innerHTML = "Treci broj je izabran";
 				document.getElementById('divovi').innerHTML += "<div id='biraj4' align='center'><a href='#' onclick='update_content();'>Birajte cetvrti broj</a></div></br>";
 			}
@@ -46,10 +46,10 @@ function update_content()
 	if (temp == 4) {
 		var bule4 = 1;
 		while (bule4==1) {
-			var vrednost = Math.floor(Math.random() * 10);
-			if (vrednost > 0) {
+			var vrednost4 = Math.floor(Math.random() * 10);
+			if (vrednost4 > 0) {
 				bule4 = 0;
-				document.getElementById('celija4').innerHTML = vrednost;
+				document.getElementById('celija4').innerHTML = vrednost4;
 				document.getElementById('biraj4').innerHTML = "Cetvrti broj je izabran";
 				document.getElementById('divovi').innerHTML += "<div id='biraj5' align='center'><a href='#' onclick='update_content();'>Birajte peti broj</a></div></br>";
 			}
@@ -60,11 +60,11 @@ function update_content()
 		while (bul==1) {
 			var temp1 = Math.floor(Math.random() * 100);
 			if ((temp1<=20)&&(temp1>0)&&(temp1%5==0)) {
-				var temp2 = temp1;
+				var vrednost5 = temp1;
 				bul = 0;	
 			}
 		}		
-		document.getElementById('celija6').innerHTML = temp2;
+		document.getElementById('celija6').innerHTML = vrednost5;
 		document.getElementById('biraj5').innerHTML = "Peti broj je izabran";
 		document.getElementById('divovi').innerHTML += "<div id='biraj6' align='center'><a href='#' onclick='update_content();'>Birajte sesti broj</a></div></br>";
 	} 
@@ -73,12 +73,18 @@ function update_content()
 		while (bul==1) {
 			var temp1 = Math.floor(Math.random() * 100);
 			if ((temp1<=100)&&(temp1>=25)&&(temp1%25==0)) {
-				var temp2 = temp1;
+				var vrednost6 = temp1;
 				bul = 0;	
 			}
-		}		
-		document.getElementById('celija8').innerHTML = temp2;
+		}
+
+		
+		var vrednost51 = Math.floor(Math.random() * 1000);
+ 	
+		
+		document.getElementById('celija8').innerHTML = vrednost6;
 		document.getElementById('biraj6').innerHTML = "Sesti broj je izabran";
+		document.getElementById('divovi').innerHTML += "<div id='biraj7' align='center' style='margin-left:35%; width:30%; background-color: pink; border: 1px solid black; font-size:36px; text-align:center;'>Trazeni broj je "+vrednost51+"</a></div></br>";
 	} 	
 }
 </script>
