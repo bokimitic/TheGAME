@@ -3,8 +3,7 @@
 <title>Igra Moj Broj</title>
 <script>
 function update_content()
-{
-	
+{	
 	var temp = parseInt(document.getElementById('holder').innerHTML, 10) + 1;
 	document.getElementById('holder').innerHTML = parseInt(document.getElementById('holder').innerHTML, 10)+1;
 	if (temp == 1) {
@@ -77,14 +76,13 @@ function update_content()
 				bul = 0;	
 			}
 		}
-
 		
 		var vrednost51 = Math.floor(Math.random() * 1000);
- 	
-		
+ 			
 		document.getElementById('celija8').innerHTML = vrednost6;
 		document.getElementById('biraj6').innerHTML = "Sesti broj je izabran";
 		document.getElementById('divovi').innerHTML += "<div id='biraj7' align='center' style='margin-left:35%; width:30%; background-color: pink; border: 1px solid black; font-size:36px; text-align:center;'>Trazeni broj je "+vrednost51+"</a></div></br>";
+		document.getElementById('divovi').innerHTML += "<div id='resenje' align='center' >Unesite vasu jednacinu</a></div><input type='textfield' id='tekst' style='margin-left:35%; width:30%; font-size:36px; text-align:center;'/></br>";
 	} 	
 }
 </script>
@@ -92,44 +90,6 @@ function update_content()
 
 </head>
 <body>
-
-
-
-
-
-<?php
-$i = 0;
-$niz = array();
-$boje = array("red","blue","green","yellow","orange","cyan","purple");
-$boje_out = array();
-//echo "<table style='width:50%;text-align:center; font-size:24px;' align='center';><tr>";
-$n = $_GET['broj'];
-while($i<$n) { 
-	$brojka = rand(1, 39);
-	if (!in_array($brojka, $niz)) { 
-		ponovi:	
-		$boja = rand(0,6);
-		if (!in_array($boje[$boja], $boje_out)) {
-			$boje_out[$i] = $boje[$boja];
-//			echo "<td style='width: 14%; border: 1px black solid; background-color:".$boje_out[$i].";'>".$brojka."</td>";
-			$niz[$i] = $brojka;
-			$i++;
-		} else {
-			goto ponovi;
-		}	
-	}
-}
-echo "</tr></table>";
-echo "</br>";
-/* if (isset($_GET['poruka'])) {
-	echo $_GET['poruka'];
-} else {
-	echo"Unesite poruku";
-} */
-?>
-
-
-
 
 
 
@@ -153,10 +113,47 @@ echo "</br>";
 
 <div id="divovi">
 <div id="biraj1" align="center"><a href="#" onclick="update_content();">Birajte prvi broj</a></div></br>
+
+
+<!-- zasto se izgubi hyperlink sa teksta kada promenim tekst "Birate prvi broj" iz skripte ? -->
+
+
 </div>
 
 
 <div id="holder" style="display:none; visibility: hidden;">0</div>
+
+
+
+
+
+<?php
+/* $i = 0;
+$niz = array();
+$boje = array("red","blue","green","yellow","orange","cyan","purple");
+$boje_out = array();
+echo "<table style='width:50%;text-align:center; font-size:24px;' align='center';><tr>";
+$n = $_GET['broj'];
+while($i<$n) { 
+	$brojka = rand(1, 39);
+	if (!in_array($brojka, $niz)) { 
+		ponovi:	
+		$boja = rand(0,6);
+		if (!in_array($boje[$boja], $boje_out)) {
+			$boje_out[$i] = $boje[$boja];
+			echo "<td style='width: 14%; border: 1px black solid; background-color:".$boje_out[$i].";'>".$brojka."</td>";
+			$niz[$i] = $brojka;
+			$i++;
+		} else {
+			goto ponovi;
+		}	
+	}
+}
+echo "</tr></table>";
+echo "</br>"; */
+?>
+
+
 
 
 </body>
